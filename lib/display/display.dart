@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_example1/display/view/counter_view.dart';
+import 'package:flutter_getx_example1/display/view/tabbarWithStateful.dart';
 import 'package:flutter_getx_example1/display/view/tabbar_view.dart';
 import 'package:flutter_getx_example1/display/view/todo_view.dart';
 import 'package:get/get.dart';
+
+import 'view/tabbarwithgetx.dart';
 
 class DisplayScreen extends StatefulWidget {
   const DisplayScreen({super.key});
@@ -31,6 +34,14 @@ Get.to(CounterView(),);
             ElevatedButton(onPressed: (){
               Get.to(TabBarViewScreen(),);
             }, child: Text('TabBar Example'),),
+            const SizedBox(height: 10,),
+            ElevatedButton(onPressed: (){
+              Get.to(TabBarWithStateful(),);
+            }, child: Text('TabBar Example With Stateful'),),
+            const SizedBox(height: 10,),
+            ElevatedButton(onPressed: (){
+              Get.to(TabBarWithGetX(),);
+            }, child: Text('TabBar With GetX'),),
           ],),
       ),
     );
